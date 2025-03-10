@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Hangout Delhi – Connecting artists with unique venues for curated experiences.">
+  <title>The Hangout Delhi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F8F3E7; /* Beige background */
+      color: #333;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+    /* Improved Navbar Styles */
+    .navbar {
+      background: linear-gradient(45deg, #9b4d96, #7a3d78); /* Gradient background */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 0.8rem 1rem;
+    }
+    .navbar-brand {
+      color: #F8F3E7 !important;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link {
+      color: #F8F3E7 !important;
+      font-size: 1.1rem;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #F8F3E7 !important;
+      border-bottom: 2px solid #F8F3E7;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url('k.jpg'); /* Ensure k.jpg is in your folder */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Overlay for text readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #F8F3E7;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+    
+    /* Button Enhancements */
+    .btn-warning {
+      background-color: #9b4d96;
+      border-color: #9b4d96;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .btn-warning:hover {
+      background-color: #7a3d78;
+      border-color: #7a3d78;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #9b4d96;
+      margin-bottom: 20px;
+    }
+
+    /* Card Styles for Experiences */
+    .card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    .card .card-img-top {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    /* Partners Section */
+    #partners img {
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    #partners img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #9b4d96;
+      color: #F8F3E7;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">The Hangout Delhi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiences">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+      <h1>Welcome to The Hangout Delhi</h1>
+      <p>Curated artistic experiences connecting creators with unique venues.</p>
+      <a href="#about" class="btn btn-warning btn-lg mt-3">Explore Now</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="lead">The Hangout Delhi is your ultimate hangout destination, offering everything from delicious food and drinks to fun-filled experiences and events. Perfect for friends, family, and colleagues to unwind and enjoy!</p>
+    </div>
+  </section>
+
+  <!-- Our Experiences Section -->
+  <section id="experiences" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Our Experiences</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <img src="https://thumbs.dreamstime.com/b/illustration-workshop-icon-isolated-over-white-background-60974892.jpg" class="card-img-top" alt="Live Music">
+            <div class="card-body">
+              <h5 class="card-title">Live Music Nights</h5>
+              <p class="card-text">Enjoy live performances from local bands and artists every weekend!</p>
+              <a href="#events" class="btn btn-warning">Join Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <img src="https://thumbs.dreamstime.com/b/illustration-workshop-icon-isolated-over-white-background-60974892.jpg" class="card-img-top" alt="Game Night">
+            <div class="card-body">
+              <h5 class="card-title">Game Night</h5>
+              <p class="card-text">Gather your friends for an evening full of exciting games and challenges.</p>
+              <a href="#events" class="btn btn-warning">Sign Up</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <img src="https://thumbs.dreamstime.com/b/illustration-workshop-icon-isolated-over-white-background-60974892.jpg" class="card-img-top" alt="Open Mic">
+            <div class="card-body">
+              <h5 class="card-title">Open Mic Nights</h5>
+              <p class="card-text">Showcase your talent or enjoy local performances at our open mic sessions.</p>
+              <a href="#events" class="btn btn-warning">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Partners Section -->
+  <section id="partners" class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">Our Partners</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" class="img-fluid" alt="Partner 1">
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" class="img-fluid" alt="Partner 2">
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" class="img-fluid" alt="Partner 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title mb-4">Upcoming Events</h2>
+      <p class="lead">Stay tuned for our upcoming events! Get ready to enjoy live music, games, and more.</p>
+      <ul class="list-unstyled">
+        <li><strong>Live Music – March 15, 2025</strong></li>
+        <li><strong>Game Night – March 20, 2025</strong></li>
+        <li><strong>Open Mic Night – March 25, 2025</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5" style="background-color: beige; color: #333;">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">Contact Us</h2>
+      <p class="lead">We’d love to hear from you! Get in touch for any inquiries or just to say hello.</p>
+      <p>Address: 123 Hangout Street, Delhi, India</p>
+      <p>Phone: +91 123 456 7890</p>
+      <p>Email: info@thehangoutdelhi.com</p>
+      <div>
+        <a href="#" class="text-dark me-3">Facebook</a>
+        <a href="#" class="text-dark">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="text-center">&copy; 2025 The Hangout Delhi. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" defer></script>
+</body>
+</html>
