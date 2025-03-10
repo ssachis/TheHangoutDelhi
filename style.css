@@ -1,0 +1,241 @@
+
+/* Global Styles */
+.py-5 {
+    padding: 4rem !important;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F3E7; /* Beige background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(45deg, #9b4d96, #7a3d78);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1rem;
+}
+.navbar-brand img {
+    /* Adjust as needed */
+    height: 50px;
+    scale: 1.6;
+    filter: invert(100%);
+}
+.navbar-nav .nav-link {
+    color: #F8F3E7 !important;
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+.navbar-nav .nav-link:hover {
+    color: #F8F3E7 !important;
+    border-bottom: 2px solid #F8F3E7;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('k.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* Modern FAQ Styles */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #F8F3E7;
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* Button Enhancements */
+.btn-warning {
+    background-color: #9b4d96;
+    border-color: #9b4d96;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-warning:hover {
+    background-color: #7a3d78;
+    border-color: #7a3d78;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9b4d96;
+    margin-bottom: 20px;
+}
+
+/* Card Styles for Experiences */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Partners Section */
+#partners img {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+#partners img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #fff;
+}
+#testimonials .card {
+    border: none;
+    background-color: #fff1ce;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#testimonials .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+#testimonials img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+#testimonials p {
+    font-style: italic;
+}
+#testimonials h6 {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #7a3d78;
+}
+
+/* FAQ Section */
+#faq .accordion-button {
+    background-color: #F8F3E7;
+    color: #7a3d78;
+    font-weight: 600;
+}
+#faq .accordion-button:not(.collapsed) {
+    background-color: #ffdddd;
+}
+#faq .accordion-body {
+    background-color: #fff;
+    color: #333;
+}
+#faq {
+background-color: #fff;
+padding-top: 4rem;
+padding-bottom: 4rem;
+}
+
+#faq .accordion-item {
+border-radius: 0;
+}
+
+#faq .accordion-button {
+background-color: #fff;
+color: #333;
+font-weight: 600;
+border: none;
+box-shadow: none;
+padding: 1.25rem 1.5rem;
+transition: background-color 0.3s ease;
+}
+
+#faq .accordion-button::after {
+filter: invert(0);
+}
+
+#faq .accordion-button:not(.collapsed) {
+background-color: #ffe1e1;
+color: #333;
+}
+
+#faq .accordion-body {
+background-color: #fff;
+color: #666;
+border-top: 1px solid #ddd;
+padding: 1rem 1.5rem;
+}
+
+
+/* Footer */
+footer {
+    background-color: #9b4d96;
+    color: #F8F3E7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Extra gap between sections */
+.gap-bottom {
+    margin-bottom: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+    font-size: 2.8rem;
+    }
+    .hero p {
+    font-size: 1rem;
+    }
+    .carousel-item .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+}
