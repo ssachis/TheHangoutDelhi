@@ -1,4 +1,7 @@
 
+
+
+
 /* Global Styles */
 .py-5 {
     padding: 4rem !important;
@@ -18,7 +21,7 @@ a {
 
 /* Navbar Styles */
 .navbar {
-    background: linear-gradient(45deg, #9b4d96, #7a3d78);
+    background: linear-gradient(45deg, #fae2f9, #7a3d78);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 0.8rem 1rem;
 }
@@ -26,10 +29,10 @@ a {
     /* Adjust as needed */
     height: 50px;
     scale: 1.6;
-    filter: invert(100%);
+    filter: brightness(0.5);
 }
 .navbar-nav .nav-link {
-    color: #F8F3E7 !important;
+    color: #ffe8b2 !important;
     font-size: 1.1rem;
     margin-left: 1.5rem;
     font-weight: 500;
@@ -44,7 +47,7 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url('k.jpg');
+    background-image: url('canva.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -54,7 +57,13 @@ a {
     overflow: hidden;
 }
 /* Modern FAQ Styles */
-
+.light-gray-box {
+    border: 1px solid #D3D3D3; /* Light gray border */
+    padding: 10px;             /* Space between text and border */
+    display: inline-block;   
+    background-color: rgba(0, 0, 0, 0.5);;  /* Adjusts the box size to fit the content */
+  }
+  
 .hero::before {
     content: "";
     position: absolute;
@@ -62,7 +71,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 .hero .container {
@@ -73,22 +82,27 @@ a {
 }
 .hero h1 {
     font-size: 3.5rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     margin-bottom: 20px;
-    color: #F8F3E7;
+    color: #fde5b2;
 }
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 30px;
-    color: #e0e0e0;
+    color: #ffe8b2;
 }
 
 /* Button Enhancements */
 .btn-warning {
-    color:white;
-    background-color: #9b4d96;
-    border-color: #9b4d96;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+   
+        color: white;
+        /* width: 48%; */
+        /* display: none; */
+        opacity: 1;
+        background-color: #452242;
+        /* border-color: #9b4d96; */
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+     
 }
 .btn-warning:hover {
     background-color: #7a3d78;
@@ -98,7 +112,7 @@ a {
 /* Section Titles */
 .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: #9b4d96;
     margin-bottom: 20px;
 }
@@ -226,11 +240,35 @@ footer {
 .gap-bottom {
     margin-bottom: 60px;
 }
+@media (max-width: 480px) {
+    .hero h1 {
+    font-size: 1.5rem !important;
+    }
+    .hero p {
+   
+            font-size: 0.5rem !important;
+            margin-bottom: auto !important;
+            margin-top: 10px !important;
+    
+    }
+    .btn-warning {
+
+         width: 48% !important;
+        
+      
+     
+         font-size: small !important;
+}
+.light-gray-box {
+
+    width: 78% !important;
+}
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     }
     .hero p {
     font-size: 1rem;

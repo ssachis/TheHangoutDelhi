@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hangout Delhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="fixed top-0 w-full bg-white shadow-md p-4 flex justify-between items-center transition-all ease-in-out">
+        <h1 class="text-2xl font-bold text-indigo-600">The Hangout Delhi</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#about" class="text-gray-700 hover:text-indigo-500">About</a></li>
+            <li><a href="#events" class="text-gray-700 hover:text-indigo-500">Events</a></li>
+            <li><a href="#contact" class="text-gray-700 hover:text-indigo-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('canva.jpg');">
+        <h2 class="text-white text-4xl font-bold bg-black bg-opacity-50 p-4 rounded-lg">Welcome to The Hangout Delhi</h2>
+    </header>
+
+    <section id="about" class="fade-in p-10 text-center">
+        <h2 class="text-3xl font-bold text-indigo-600">About Us</h2>
+        <p class="text-gray-700 mt-4 max-w-2xl mx-auto">We curate unique events by connecting artists with venues, fostering creativity and community engagement.</p>
+    </section>
+
+    <section id="events" class="fade-in p-10 bg-white text-center">
+        <h2 class="text-3xl font-bold text-indigo-600">Our Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold">Sip & Paint</h3>
+                <p class="text-gray-600">A relaxing evening with art and good company.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold">Ceramic Mug Making</h3>
+                <p class="text-gray-600">Create a unique piece with Mrida Ceramique.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold">Calligraphy</h3>
+                <p class="text-gray-600">Master the art of beautiful writing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in p-10 text-center">
+        <h2 class="text-3xl font-bold text-indigo-600">Get in Touch</h2>
+        <p class="text-gray-700">Email us at <a href="mailto:hello@thehangoutdelhi.com" class="text-indigo-500">hello@thehangoutdelhi.com</a></p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let elements = document.querySelectorAll(".fade-in");
+
+            function fadeInOnScroll() {
+                elements.forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+            window.addEventListener("scroll", fadeInOnScroll);
+            fadeInOnScroll();
+        });
+    </script>
+</body>
+</html>
