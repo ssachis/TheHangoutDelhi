@@ -32,14 +32,15 @@ a {
     /* Adjust as needed */
     height: 50px;
     scale: 1.6;
-    filter: brightness(0.5);
+
 }
 .bg-light {
    
     background-color: rgb(255, 255, 255)  !important;
 }
 .navbar-nav .nav-link {
-    color: #452242 !important;
+    font-family: cursive;
+    color: purple!important;
     font-size: 0.8rem;
     margin-left: 1.5rem;
     font-weight: 500;
@@ -230,7 +231,7 @@ transition: background-color 0.3s ease;
 }
 
 #faq .accordion-button::after {
-filter: invert(0);
+
 }
 
 #faq .accordion-button:not(.collapsed) {
