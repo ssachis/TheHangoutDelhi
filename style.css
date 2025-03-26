@@ -21,9 +21,12 @@ a {
 
 /* Navbar Styles */
 .navbar {
-    background: linear-gradient(45deg, #fae2f9, #7a3d78);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: white;
     padding: 0.8rem 1rem;
+}
+.navbar-toggler-icon {
+  
+    filter: invert(1);
 }
 .navbar-brand img {
     /* Adjust as needed */
@@ -32,18 +35,29 @@ a {
     filter: brightness(0.5);
 }
 .navbar-nav .nav-link {
-    color: #ffe8b2 !important;
-    font-size: 1.1rem;
+    color: black !important;
+    font-size: 0.8rem;
     margin-left: 1.5rem;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     border-bottom: 2px solid transparent;
 }
 .navbar-nav .nav-link:hover {
-    color: #F8F3E7 !important;
-    border-bottom: 2px solid #F8F3E7;
+    color: purple!important;
+    border-bottom: 2px solid purple;
 }
-
+.navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand img {
+    height: 60px; /* Adjust the logo size as needed */
+  }
+  
+  .navbar-toggler {
+    margin-top: 0.5rem;
+  }
+  
 /* Hero Section */
 .hero {
     position: relative;
@@ -240,6 +254,11 @@ footer {
 .gap-bottom {
     margin-bottom: 60px;
 }
+.navbar {
+    background: #feeded
+    
+  }
+  
 @media (max-width: 480px) {
     .hero h1 {
     font-size: 1.5rem !important;
