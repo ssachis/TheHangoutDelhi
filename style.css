@@ -34,8 +34,12 @@ a {
     scale: 1.6;
     filter: brightness(0.5);
 }
+.bg-light {
+   
+    background-color: rgb(255, 255, 255)  !important;
+}
 .navbar-nav .nav-link {
-    color: black !important;
+    color: #452242 !important;
     font-size: 0.8rem;
     margin-left: 1.5rem;
     font-weight: 500;
