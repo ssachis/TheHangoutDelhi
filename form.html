@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <style>
+    /* Your CSS styles here */
+    form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+   
+      
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: purple;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+   
+
+    fieldset {
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    legend {
+        font-family: sans-serif;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .radio, .checkbox {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio label, .checkbox label {
+        font-family: sans-serif;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdwYcKmZY-QIPJ2jB4rVDjp2CiHza2TJx7-ti-3gB1Z0Ljt2Q/formResponse" method="POST" target="_self" id="bootstrapForm">
+    <fieldset>
+        <legend><h3 style="
+            color: purple;">EVENT REGISTRATION</h3></legend>
+       
+      </fieldset>
+    <fieldset>
+      <legend>Name</legend>
+      <div class="form-group">
+        <input id="name" type="text" name="entry.631124678" class="form-control" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Age</legend>
+      <div class="form-group">
+        <input id="age" type="number" name="entry.1978752102" class="form-control" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Name of the Event</legend>
+      <div class="form-group">
+        <input id="event-name" type="text" name="entry.606342220" class="form-control" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Registering for more than 1?</legend>
+      <div class="form-group">
+        <div class="radio">
+          <input type="radio" id="registering-yes" name="entry.460381570" value="Yes">
+          <label for="registering-yes">Yes</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="registering-no" name="entry.460381570" value="No">
+          <label for="registering-no"> &nbsp;No</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>If yes, how many?</legend>
+      <div class="form-group">
+        <input id="quantity" type="number" name="entry.1610057695" class="form-control">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Number</legend>
+      <div class="form-group">
+        <input id="contact-number" type="tel" name="entry.1473126885" class="form-control" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Email Id</legend>
+      <div class="form-group">
+        <input id="email" type="email" name="entry.867210876" class="form-control" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Instagram handle if you want us to tag you</legend>
+      <div class="form-group">
+        <input id="instagram-handle" type="text" name="entry.268922475" class="form-control">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Have you completed payment?</legend>
+      <div class="form-group">
+        <div class="radio">
+          <input type="radio" id="payment-yes" name="entry.250740898" value="Yes">
+          <label for="payment-yes">Yes</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="payment-no" name="entry.250740898" value="No">
+          <label for="payment-no">&nbsp;No</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="2708958566002887431">
+    <input type="hidden" name="pageHistory" value="0">
+
+    <button type="submit" >Submit</button>
+  </form>
+
+</body>
+</html>
