@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F8F3E7;
+    background-color: #fffaee;
     color: #333;
     margin: 0;
     padding: 0;
@@ -111,7 +111,6 @@ a {
 
 /* Testimonials Section */
 #testimonials {
-    background-color: #fff;
 }
 #testimonials .card {
     background-color: #fff1ce;
@@ -278,7 +277,7 @@ footer {
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     
     }}
 @media (max-width: 480px) {
