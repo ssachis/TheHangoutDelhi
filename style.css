@@ -7,6 +7,10 @@ body {
     padding: 0;
     font-size: 16px;
 }
+.bg-light {
+ 
+    background-color: white !important;}
+
 a {
     text-decoration: none;
 }
@@ -95,7 +99,7 @@ a {
 
 /* Partners Section */
 #partners img {
-    padding: 15px;
+    padding: 0px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -268,7 +272,23 @@ footer {
         max-width: 100%;
     }
 }
+@media (max-width: 400px) {
+    #experiences{
+        padding:1rem !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    
+    }}
 @media (max-width: 480px) {
+    #experiences{
+        padding:1.5rem !important;
+    }
+    .hero{
+        height: 94vh;
+    }
+    
     .hero h1 {
         font-size: 1.5rem !important;
     }
@@ -286,3 +306,67 @@ footer {
         width: 78% !important;
     }
 }
+
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #experienceTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
+  
+  .experience-card {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Tablet */
+  @media (max-width: 992px) {
+    .experience-card {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .experience-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9b4d96; /* your main purple */
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .carousel-nav:hover {
+    background-color: #6a1b9a; /* slightly darker hover effect */
+    transform: translateY(-50%) scale(1.05);
+  }
+  
+  .carousel-nav.prev {
+    left: 10px;
+  }
+  
+  .carousel-nav.next {
+    right: 10px;
+  }
+  
