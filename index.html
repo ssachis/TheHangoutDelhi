@@ -1,10 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Hangout Delhi – Connecting artists with unique venues for curated experiences.">
-  <title>The Hangout Delhi</title>
+
+  <!-- SEO Meta Tags -->
+  <title>The Hangout Delhi – Curated Art Experiences & Creative Events</title>
+  <meta name="description" content="Discover The Hangout Delhi – a hub for unique art workshops, music nights, and cultural experiences in collaboration with creative venues. Register now!">
+  <meta name="keywords" content="Hangout Delhi, Delhi events, art workshops, music nights, creative experiences, artist venues, curated events Delhi, things to do in Delhi, cultural events Delhi">
+  <meta name="author" content="The Hangout Delhi">
+
+  <!-- Social Media Preview -->
+  <meta property="og:title" content="The Hangout Delhi – Creative Experiences & Artistic Events" />
+  <meta property="og:description" content="Join The Hangout Delhi for high tea & kintsugi, ceramic jewelry, calligraphy, and more artistic events." />
+  <meta property="og:image" content="https://yourdomain.com/path-to-cover-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Hangout Delhi – Artistic Events & Experiences">
+  <meta name="twitter:description" content="Explore curated creative experiences in Delhi. From origami brunches to mindfulness workshops.">
+  <meta name="twitter:image" content="https://yourdomain.com/path-to-cover-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logos/favicon.png" type="image/x-icon">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
@@ -165,7 +186,16 @@
             </div>
           </div>
         </div>
-       
+        <div class="experience-card">
+          <div class="card shadow-sm">
+            <img src="workshop images/Screenshot 2025-06-20 at 12.11.45 PM.png" class="card-img-top" alt="Workshop">
+            <div class="card-body">
+              <h5 class="card-title">Layers and Latte</h5>
+              <p class="card-text">From painting quirky mugs to bonding over delicious beverages.</p>
+              <a href="https://www.instagram.com/reel/DJzLJ7nSDfU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="target="_blank"   class="btn btn-warning">Explore</a>
+            </div>
+          </div>
+        </div>
   
       
       </div>
@@ -186,7 +216,14 @@
   <section id="partners" class="bg-light py-5">
     <div class="container text-center">
       <h2 class="section-title mb-4">Our Collaborations</h2>
-      <div class="row">
+      
+   <!-- Carousel Start -->
+<div id="collabCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner text-center">
+
+    <!-- First slide -->
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 mb-4">
           <img src="subko.png" class="img-fluid" alt="Partner 1">
         </div>
@@ -197,6 +234,35 @@
           <img src="greenr_logo.jpeg" class="img-fluid" alt="Partner 3">
         </div>
       </div>
+    </div>
+
+    <!-- Second slide -->
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="partner4.png" class="img-fluid" alt="Partner 4">
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="partner5.png" class="img-fluid" alt="Partner 5">
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="partner6.png" class="img-fluid" alt="Partner 6">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#collabCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#collabCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<!-- Carousel End -->
+
     </div>
   </section>
 
