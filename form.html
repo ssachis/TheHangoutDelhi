@@ -16,15 +16,27 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #ffffff;
+      background: #fff9eb;
       padding-bottom: 100px;
     }
 /* Navbar styles matching homepage */
 .custom-navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgb(235 227 236 / 95%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   margin-bottom: 2rem;
+  top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgb(234 234 234 / 60%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    max-width: 95%;
+    margin: 1rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
 }
 .btn.btn-primary {
   background: white; /* Clean base */
@@ -47,6 +59,7 @@
 
 
 .navbar-logo img {
+  scale:1.3;
   height: 48px;
 }
 
@@ -122,7 +135,7 @@
 
 
     h2.text-center.mb-4 {
-      color: #6a1b9a;
+      color: #802589;
       font-weight: 700;
     }
 
@@ -201,7 +214,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background:rgb(234 234 234 / 60%);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -372,6 +385,7 @@
         <div class="modal-body">
           <p class="event-detail-date" id="modalEventDate"></p>
           <p class="event-detail-price" id="modalEventPrice"></p>
+          <p class="event-detail-time" id="modalEventTime"></p>
           <p id="modalEventDescription">Event description will appear here.</p>
           <div class="quantity-control">
             <button class="quantity-btn" onclick="adjustQuantity(-1)">-</button>
@@ -389,9 +403,9 @@
 
   <script>
     const events = [
-      { name: "High Tea & Kintsugi", price: 500, description: "Elegant high tea meets golden repair art.", image: "workshop images/IMG-20250216-WA0019.jpg", date: "July 25, 2023" },
-      { name: "Origami & Brunch", price: 600, description: "Fold your way through brunch.", image: "workshop images/PXL_20240618_074155684.MP (1).jpg", date: "August 5, 2023" },
-      { name: "Ceramic Jewellery", price: 650, description: "Design and glaze your ceramic jewelry.", image: "workshop images/91CBBBC8-894F-4091-8D5D-3C500886B2FF_1_102_a (2).webp", date: "August 12, 2023" }
+      { name: "High Tea & Kintsugi", price: 500,time:"1pm-3pm", description: "Immerse yourself in a serene afternoon of teas and delicate bites.Discover the ancient Japanese art of Kintsugi —repairing broken ceramics with gold.A soulful blend of mindfulness, craft, and charm.", image: "workshop images/IMG-20250216-WA0019.jpg", date: "July 25, 2023" },
+      { name: "Origami & Brunch", price: 600,time:"1pm-3pm", description: "Fold your way through brunch.", image: "workshop images/PXL_20240618_074155684.MP (1).jpg", date: "August 5, 2023" },
+      { name: "Ceramic Jewellery", price: 650,time:"1pm-3pm", description: "Design and glaze your ceramic jewelry.", image: "workshop images/91CBBBC8-894F-4091-8D5D-3C500886B2FF_1_102_a (2).webp", date: "August 12, 2023" }
     ];
 
     const selected = new Map();
@@ -409,6 +423,7 @@
             <div class="event-image" style="background-image: url('${event.image}')"></div>
             <div class="event-content">
               <div class="event-date">${event.date}</div>
+               
               <div class="event-title">${event.name}</div>
               <div class="event-price">₹${event.price}</div>
               <button class="btn-view" onclick="showEventDetails(${index})">View Details</button>
@@ -423,8 +438,10 @@
       const event = events[index];
       currentIndex = index;
       document.getElementById("modalEventTitle").textContent = event.name;
-      document.getElementById("modalEventDate").textContent = event.date;
-      document.getElementById("modalEventPrice").textContent = `₹${event.price}`;
+      document.getElementById("modalEventDate").textContent = "Date: "+event.date;
+      document.getElementById("modalEventTime").textContent = "Time: "+event.time;
+      document.getElementById("modalEventPrice").textContent = "Price: "+`₹${event.price}`
+      ;
       document.getElementById("modalEventDescription").textContent = event.description;
       document.getElementById("quantityValue").textContent = selected.get(index)?.quantity || 1;
       const modal = new bootstrap.Modal(document.getElementById("eventModal"));
