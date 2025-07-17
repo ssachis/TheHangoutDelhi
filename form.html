@@ -2,286 +2,347 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Upcoming Events | The Hangout Delhi</title>
 
   <!-- Fonts + Bootstrap -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
+    :root {
+      --primary-color: #802589;
+      --secondary-color: #f3c1de;
+      --accent-color: #ffc9e3;
+      --light-bg: #faf5ff;
+      --dark-text: #2d2d2d;
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Poppins', sans-serif;
+    }
+    
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #ffffff;
+      font-family: var(--body-font);
+      background: #fffaee;
+      color: var(--dark-text);
       padding-bottom: 100px;
+      line-height: 1.6;
     }
-/* Navbar styles matching homepage */
-.custom-navbar {
-  background: rgb(235 227 236 / 95%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: rgb(234 234 234 / 60%);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 1rem 2rem;
-    max-width: 95%;
-    margin: 1rem auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-}
-.btn.btn-primary {
-  background: white; /* Clean base */
-  color: #6a1b9a; /* Deep purple text */
-  border: 2px solid #f3c1de; /* Light pink border */
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  box-shadow: none;
-}
-
-.btn.btn-primary:hover {
-  background: linear-gradient(135deg, #ffc9e3, #d6b4f0); /* Baby pink to soft purple */
-  color: #fff;
-  border: 2px solid transparent;
-  box-shadow: 0 6px 20px rgba(106, 27, 154, 0.2);
-}
-
-
-.navbar-logo img {
-  scale:1.3;
-  height: 48px;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #6a1b9a;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-  color: #9b4d96;
-}
-
-.navbar-toggler {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-}
-
-.navbar-toggler-icon {
-  scale:calc(0.8);
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  background-color: #6a1b9a;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #6a1b9a;
-  left: 0;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before {
-  top: -8px;
-}
-
-.navbar-toggler-icon::after {
-  top: 8px;
-}
-
-.mobile-nav-list {
-  background-color: #fff;
-  padding: 1rem;
-}
-
-.mobile-nav-list li {
-  padding: 0.5rem 0;
-}
-
-.mobile-nav-list a {
-  text-decoration: none;
-  color: #6a1b9a;
-  font-weight: 500;
-}
-
-
-    h2.text-center.mb-4 {
-      color: #802589;
-      font-weight: 700;
+    
+    /* Navbar with lighter font weight */
+    .custom-navbar {
+      background: rgb(235 227 236 / 95%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem 2rem;
+      margin-bottom: 2rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgb(234 234 234 / 60%);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 1rem 2rem;
+      max-width: 95%;
+      margin: 1rem auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
     }
 
+    .navbar-logo img {
+      height: 48px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-links li {
+      list-style: none;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: 400; /* Lighter weight */
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .navbar-links a:hover {
+      color: #9b4d96;
+    }
+
+    .navbar-toggler {
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+    }
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background-color: #6a1b9a;
+      position: relative;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #6a1b9a;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .navbar-toggler-icon::before {
+      top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+      top: 8px;
+    }
+
+    .mobile-nav-list {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .mobile-nav-list li {
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-list a {
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: 450; /* Lighter weight */
+    }
+
+    /* Modern Page Header */
+    .page-header {
+      text-align: center;
+      margin: 3.5rem 0 3rem;
+    }
+
+    .page-header h1 {
+      margin-top: -18px;
+      font-family: var(--heading-font);
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Enhanced Event Cards */
     .event-card {
       width: 100%;
-      height: 300px;
       border-radius: 16px;
       overflow: hidden;
       position: relative;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 25px;
-      transition: all 0.3s ease;
-      border: none;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      background: white;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .event-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      border-color: rgba(128, 37, 137, 0.1);
     }
 
     .event-image {
       width: 100%;
-      height: 100%;
+      height: 240px;
       background-size: cover;
       background-position: center;
       position: relative;
     }
 
-    .event-image::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
-    }
-
     .event-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px;
-      color: white;
-      z-index: 2;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .event-date {
-      font-size: 0.85rem;
-      opacity: 0.9;
-      margin-bottom: 5px;
+      font-family: var(--heading-font);
+      font-size: 0.78rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
     .event-title {
-      font-size: 1.3rem;
+      font-family: var(--heading-font);
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      color: var(--dark-text);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .event-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .event-meta i {
+      color: var(--primary-color);
+      font-size: 0.9rem;
+      width: 16px;
+      text-align: center;
     }
 
     .event-price {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: 15px;
+      font-family: var(--body-font);
+      font-weight: 600;
+    }
+
+    .event-actions {
+      margin-top: 16px;
     }
 
     .btn-view {
-      background-color: rgba(255,255,255,0.2);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
+      background: white;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
       border-radius: 8px;
-      padding: 8px 16px;
+      padding: 10px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn-view:hover {
-      background-color: rgba(255,255,255,0.3);
-    }.floating-cart {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background:rgb(234 234 234 / 60%);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-top: 1px solid #ddd;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(128, 37, 137, 0.2);
+    }
 
-.selected-events-display {
-  color: #333;
-  font-weight: 500;
-  max-width: 70%;
-}
+    /* Modern Floating Cart */
+    .floating-cart {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      border-radius: 50px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      max-width: 90%;
+      border: 1px solid rgba(128, 37, 137, 0.1);
+    }
 
-.selected-line i,
-.total-line i {
-  color: #6a1b9a;
-  font-size: 1rem;
-}
+    .selected-events-display {
+      color: var(--dark-text);
+      font-weight: 500;
+      max-width: 70%;
+    }
 
-.btn-pay {
-  background-color: #6a1b9a;
-  color: white;
-  border: none;
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
-  transition: all 0.3s ease;
-}
+    .selected-line i,
+    .total-line i {
+      color: var(--primary-color);
+      font-size: 1rem;
+      margin-right: 8px;
+    }
 
-.btn-pay:hover {
-  background-color: #53147a;
-  box-shadow: 0 6px 18px rgba(83, 20, 122, 0.25);
-}
+    .btn-pay {
+      background: linear-gradient(135deg, var(--primary-color), #9b4d96);
+      color: white;
+      border: none;
+      font-weight: 600;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(128, 37, 137, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
+    .btn-pay:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(128, 37, 137, 0.4);
+    }
 
-   
-
-    /* MODAL STYLES */
+    /* Elegant Modal */
     .modal-content {
       border-radius: 16px;
+      overflow: hidden;
       border: none;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
-      padding: 20px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
     }
 
     .modal-header {
+      padding: 25px 25px 0;
       border-bottom: none;
-      padding-bottom: 0;
     }
 
     .modal-title {
+      font-family: var(--heading-font);
       font-weight: 600;
-      color: #6a1b9a;
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .modal-body {
+      padding: 0 25px 20px;
     }
 
     .modal-body p {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    .event-detail-date,
+    .event-detail-price,
+    .event-detail-time {
+      font-weight: 500;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-family: var(--heading-font);
     }
 
     .quantity-control {
@@ -289,7 +350,7 @@
       align-items: center;
       justify-content: center;
       gap: 15px;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
     }
 
     .quantity-btn {
@@ -297,19 +358,131 @@
       height: 40px;
       border: none;
       border-radius: 50%;
-      background: #e2d1f5;
+      background: var(--accent-color);
       font-size: 1.2rem;
       font-weight: bold;
-      color: #6a1b9a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
     .quantity-btn:hover {
-      background: #c4a6df;
+      background: var(--primary-color);
+      transform: scale(1.1);
+    }
+
+    #quantityValue {
+      font-size: 1.3rem;
+      font-weight: 600;
+      min-width: 30px;
+      text-align: center;
+      color: var(--dark-text);
     }
 
     .modal-footer {
       border-top: none;
-      padding-top: 0;
+      padding: 0 25px 25px;
+      justify-content: space-between;
+    }
+    
+    .btn-outline-secondary {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-secondary:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #6a1b9a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(128, 37, 137, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .event-card {
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .event-card:nth-child(1) { animation-delay: 0.1s; }
+    .event-card:nth-child(2) { animation-delay: 0.2s; }
+    .event-card:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .page-header p {
+        font-size: 1rem;
+      }
+      
+      .event-image {
+        height: 200px;
+      }
+      
+      .event-content {
+        padding: 20px;
+      }
+      
+      .modal-title {
+        font-size: 1.5rem;
+      }
+      
+      .floating-cart {
+        padding: 1rem;
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+      }
+      
+      .selected-events-display {
+        max-width: 100%;
+      }
+      
+      .btn-pay {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -323,9 +496,8 @@
       <ul class="navbar-links d-none d-lg-flex">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="Register.html">Registeration</a></li>
         <li><a href="index.html#partners">Partners</a></li>
- 
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
@@ -341,39 +513,45 @@
       <ul class="mobile-nav-list list-unstyled text-center">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="Register.html">Registeration</a></li>
         <li><a href="index.html#partners">Partners</a></li>
-       
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
-  
 
-  <div class="container py-4">
-    <h2 class="text-center mb-4">Upcoming Events</h2>
+  <!-- Page Header -->
+  <div class="container">
+    <div class="page-header">
+      <h1>Upcoming Experiences</h1>
+      <p>Discover our curated selection of creative workshops and social events. Book your spot for these unique experiences today!</p>
+    </div>
+  </div>
+
+  <!-- Events Grid -->
+  <div class="container">
     <div class="row" id="event-list"></div>
   </div>
 
   <!-- Floating Cart -->
-
-<div class="floating-cart shadow-lg">
-  <div class="selected-events-display">
-    <div class="selected-line">
-      <i class="fa fa-calendar-check me-2"></i>
-      <strong>Selected:</strong>
-      <span id="selected-events">None</span>
+  <div class="floating-cart shadow-lg">
+    <div class="selected-events-display">
+      <div class="selected-line">
+        <i class="fa fa-calendar-check"></i>
+        <strong>Selected:</strong>
+        <span id="selected-events">None</span>
+      </div>
+      <div class="total-line mt-1">
+        <i class="fa fa-wallet"></i>
+        <strong>Total:</strong>
+        <span class="rupee-symbol">₹</span><span id="total-amount">0</span>
+      </div>
     </div>
-    <div class="total-line mt-1">
-      <i class="fa fa-wallet me-2"></i>
-      <strong>Total:</strong>
-      ₹<span id="total-amount">0</span>
-    </div>
+    <button class="btn-pay" onclick="startPayment()">
+      <i class="fas fa-lock"></i> Proceed
+    </button>
   </div>
-  <button class="btn-pay" onclick="startPayment()">Proceed</button>
-</div>
-
 
   <!-- Modal for Event Details -->
   <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
@@ -385,8 +563,8 @@
         </div>
         <div class="modal-body">
           <p class="event-detail-date" id="modalEventDate"></p>
-          <p class="event-detail-price" id="modalEventPrice"></p>
           <p class="event-detail-time" id="modalEventTime"></p>
+          <p class="event-detail-price" id="modalEventPrice"></p>
           <p id="modalEventDescription">Event description will appear here.</p>
           <div class="quantity-control">
             <button class="quantity-btn" onclick="adjustQuantity(-1)">-</button>
@@ -404,9 +582,30 @@
 
   <script>
     const events = [
-      { name: "High Tea & Kintsugi", price: 500,time:"1pm-3pm", description: "Immerse yourself in a serene afternoon of teas and delicate bites.Discover the ancient Japanese art of Kintsugi —repairing broken ceramics with gold.A soulful blend of mindfulness, craft, and charm.", image: "workshop images/IMG-20250216-WA0019.jpg", date: "July 25, 2023" },
-      { name: "Origami & Brunch", price: 600,time:"1pm-3pm", description: "Fold your way through brunch.", image: "workshop images/PXL_20240618_074155684.MP (1).jpg", date: "August 5, 2023" },
-      { name: "Ceramic Jewellery", price: 650,time:"1pm-3pm", description: "Design and glaze your ceramic jewelry.", image: "workshop images/91CBBBC8-894F-4091-8D5D-3C500886B2FF_1_102_a (2).webp", date: "August 12, 2023" }
+      { 
+        name: "High Tea & Kintsugi", 
+        price: 500,
+        time: "1pm-3pm", 
+        description: "Immerse yourself in a serene afternoon of teas and delicate bites. Discover the ancient Japanese art of Kintsugi — repairing broken ceramics with gold. A soulful blend of mindfulness, craft, and charm.", 
+        image: "workshop images/IMG-20250216-WA0019.jpg", 
+        date: "July 25, 2023" 
+      },
+      { 
+        name: "Origami & Brunch", 
+        price: 600,
+        time: "1pm-3pm", 
+        description: "Fold your way through brunch with our origami workshop. Enjoy a delightful spread of artisanal sandwiches, fresh pastries, and specialty coffees while learning the meditative art of paper folding.", 
+        image: "workshop images/PXL_20240618_074155684.MP (1).jpg", 
+        date: "August 5, 2023" 
+      },
+      { 
+        name: "Ceramic Jewellery Making", 
+        price: 650,
+        time: "1pm-3pm", 
+        description: "Design and glaze your own ceramic jewelry pieces in this hands-on workshop. You'll leave with 2-3 unique wearable art pieces and the skills to continue creating at home. All materials included.", 
+        image: "workshop images/91CBBBC8-894F-4091-8D5D-3C500886B2FF_1_102_a (2).webp", 
+        date: "August 12, 2023" 
+      }
     ];
 
     const selected = new Map();
@@ -423,11 +622,19 @@
           <div class="event-card">
             <div class="event-image" style="background-image: url('${event.image}')"></div>
             <div class="event-content">
-              <div class="event-date">${event.date}</div>
-               
-              <div class="event-title">${event.name}</div>
-              <div class="event-price">₹${event.price}</div>
-              <button class="btn-view" onclick="showEventDetails(${index})">View Details</button>
+              <div>
+                <div class="event-date">${event.date}</div>
+                <h3 class="event-title">${event.name}</h3>
+                <div class="event-meta">
+                  <span><i class="far fa-clock"></i> ${event.time}</span>
+                  <span><i class=""></i> <span class="event-price">₹${event.price}</span></span>
+                </div>
+              </div>
+              <div class="event-actions">
+                <button class="btn-view" onclick="showEventDetails(${index})">
+                  <i class="far fa-eye"></i> View Details
+                </button>
+              </div>
             </div>
           </div>`;
         container.appendChild(col);
@@ -439,10 +646,9 @@
       const event = events[index];
       currentIndex = index;
       document.getElementById("modalEventTitle").textContent = event.name;
-      document.getElementById("modalEventDate").textContent = "Date: "+event.date;
-      document.getElementById("modalEventTime").textContent = "Time: "+event.time;
-      document.getElementById("modalEventPrice").textContent = "Price: "+`₹${event.price}`
-      ;
+      document.getElementById("modalEventDate").textContent = "Date: " + event.date;
+      document.getElementById("modalEventTime").textContent = "Time: " + event.time;
+      document.getElementById("modalEventPrice").textContent = "Price: ₹" + event.price;
       document.getElementById("modalEventDescription").textContent = event.description;
       document.getElementById("quantityValue").textContent = selected.get(index)?.quantity || 1;
       const modal = new bootstrap.Modal(document.getElementById("eventModal"));
@@ -464,6 +670,13 @@
       const modal = bootstrap.Modal.getInstance(document.getElementById("eventModal"));
       modal.hide();
       renderCards();
+      
+      // Show added to cart notification
+      const cartBtn = document.querySelector('.btn-pay');
+      cartBtn.innerHTML = `<i class="fas fa-check"></i> Added!`;
+      setTimeout(() => {
+        cartBtn.innerHTML = `<i class="fas fa-lock"></i> Proceed`;
+      }, 1500);
     }
 
     function updateCart() {
@@ -473,8 +686,19 @@
         selectedEvents.push(`${event.name} (${event.quantity})`);
         total += event.price * event.quantity;
       });
-      document.getElementById("selected-events").textContent = selectedEvents.join(", ") || "None";
-      document.getElementById("total-amount").textContent = total;
+      
+      const selectedEl = document.getElementById("selected-events");
+      selectedEl.textContent = selectedEvents.join(", ") || "None";
+      
+      const totalEl = document.getElementById("total-amount");
+      totalEl.textContent = total;
+      
+      // Pulse animation when cart updates
+      if (selected.size > 0) {
+        totalEl.parentElement.style.animation = 'none';
+        void totalEl.parentElement.offsetWidth; // Trigger reflow
+        totalEl.parentElement.style.animation = 'pulse 0.5s';
+      }
     }
 
     function startPayment() {
@@ -482,7 +706,10 @@
         alert("Please select at least one event.");
         return;
       }
-      alert("Mock payment: Razorpay integration goes here.");
+      
+      // In a real implementation, this would open Razorpay checkout
+      alert("Payment gateway would open here. Selected events: " + 
+            Array.from(selected.values()).map(e => `${e.name} (x${e.quantity})`).join(', '));
     }
 
     document.addEventListener('DOMContentLoaded', renderCards);
